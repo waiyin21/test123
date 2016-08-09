@@ -1,7 +1,14 @@
 {
-  "name": "pokebmud test",
+  "name": "pk test",
   "description": "In Russia, you dont show it, it shows you!",
   "repository": "https://github.com/waiyin21/test123",
   "website": "",
-  "env": {}
+  "env": {
+    "HOST": {
+      "description": "HOST 0.0.0.0 for all"
+    },
+    "PORT": {
+      "description": "PORT to bind to"
+    }
+  }
 }
