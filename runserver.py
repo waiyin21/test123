@@ -73,4 +73,4 @@ if __name__ == '__main__':
 
     app = Pogom(scan_config, __name__)
     config['ROOT_PATH'] = app.root_path
-    app.run(threaded=True, debug="info", host="0.0.0.0", port="8080")
+    app.run(threaded=True, debug="info", host="0.0.0.0", port="5001")
