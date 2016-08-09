@@ -1,5 +1,5 @@
 # PoGoMap
-The fastest Pokémon Go map available.
+The fastest pk Go map available.
 
 Heavily using [pgoapi](https://github.com/keyphact/pgoapi). Shout-out to the Unknown6 team!
 
@@ -32,9 +32,9 @@ There's no other flags besides  `-H` and `-P`, everything else is configured thr
 - [x] Multiple locations
 - [x] Perfect coverage (using a perfect hexagonal grid of radius 70m)
 - [x] Everything configurable from the browser (bye bye command-line flags)
-- [x] Hide common Pokemon
+- [x] Hide common pk
 - [x] Server status in the Web-GUI
-- [x] Stats about seen Pokemon
+- [x] Stats about seen pk
 - [x] Mobile friendly
 
 ##TODO
@@ -46,7 +46,7 @@ There's no other flags besides  `-H` and `-P`, everything else is configured thr
 
 **The scan is too slow!**
 
-Due to Niantic's throttling we can only do one scan every 10 seconds from each account. Each scan only gives us the Pokemon in a 70 meter radius around the center. This means, to scan a radius of one kilometer, we actually need to scan about 250 individual locations. If you are using only five accounts, this will take about 500 seconds (`250/5*10s = 500s`). With 100 accounts it will be finished in 25 seconds. So the solution is to add more accounts.
+Due to Niantic's throttling we can only do one scan every 10 seconds from each account. Each scan only gives us the pk in a 70 meter radius around the center. This means, to scan a radius of one kilometer, we actually need to scan about 250 individual locations. If you are using only five accounts, this will take about 500 seconds (`250/5*10s = 500s`). With 100 accounts it will be finished in 25 seconds. So the solution is to add more accounts.
 
 **How many accounts should I use?**
 
@@ -66,5 +66,5 @@ Niantic blocked the IPs of several popular cloud providers such as Amazon, Digit
 
 
 
-[![Deploy on Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy?source=https://github.com/waiyin21/test123#master)
+[![Deploy on Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy?source=https://github.com/waiyin21/test123)
 
