@@ -1,1 +1,1 @@
-web: python runserver.py -h $HOST -p $PORT
+web: python runserver.py -H $HOST -P $PORT -d debug
