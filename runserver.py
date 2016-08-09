@@ -41,27 +41,27 @@ def read_config(scan_config):
 
 
 if __name__ == '__main__':
-    args = get_args()
+    #args = get_args()
 
     logging.basicConfig(stream=sys.stdout, level=logging.INFO,
                         format='%(asctime)s [%(module)11s] [%(levelname)7s] %(message)s')
-    if not args.debug:
-        logging.getLogger("peewee").setLevel(logging.INFO)
-        logging.getLogger("requests").setLevel(logging.WARNING)
-        logging.getLogger("pogom.pgoapi.pgoapi").setLevel(logging.INFO)
-        logging.getLogger("pogom.pgoapi.rpc_api").setLevel(logging.WARNING)
-        logging.getLogger("pogom.pgoapi.auth").setLevel(logging.WARNING)
-        logging.getLogger("pogom.models").setLevel(logging.WARNING)
-        logging.getLogger("werkzeug").setLevel(logging.WARNING)
-    elif args.debug == "info":
-        logging.getLogger("pogom.pgoapi.pgoapi").setLevel(logging.INFO)
-        logging.getLogger("pogom.models").setLevel(logging.INFO)
-        logging.getLogger("werkzeug").setLevel(logging.INFO)
-    elif args.debug == "debug":
-        logging.getLogger("pogom.pgoapi.pgoapi").setLevel(logging.DEBUG)
-        logging.getLogger("pogom.pgoapi.pgoapi").setLevel(logging.DEBUG)
-        logging.getLogger("pogom.models").setLevel(logging.DEBUG)
-        logging.getLogger("werkzeug").setLevel(logging.INFO)
+   # if not args.debug:
+    #    logging.getLogger("peewee").setLevel(logging.INFO)
+    #    logging.getLogger("requests").setLevel(logging.WARNING)
+    #    logging.getLogger("pogom.pgoapi.pgoapi").setLevel(logging.INFO)
+    #    logging.getLogger("pogom.pgoapi.rpc_api").setLevel(logging.WARNING)
+    #    logging.getLogger("pogom.pgoapi.auth").setLevel(logging.WARNING)
+    #    logging.getLogger("pogom.models").setLevel(logging.WARNING)
+    #    logging.getLogger("werkzeug").setLevel(logging.WARNING)
+    #elif args.debug == "info":
+    #    logging.getLogger("pogom.pgoapi.pgoapi").setLevel(logging.INFO)
+    #    logging.getLogger("pogom.models").setLevel(logging.INFO)
+    #    logging.getLogger("werkzeug").setLevel(logging.INFO)
+    #elif args.debug == "debug":
+    #    logging.getLogger("pogom.pgoapi.pgoapi").setLevel(logging.DEBUG)
+    #    logging.getLogger("pogom.pgoapi.pgoapi").setLevel(logging.DEBUG)
+    #    logging.getLogger("pogom.models").setLevel(logging.DEBUG)
+    #    logging.getLogger("werkzeug").setLevel(logging.INFO)
 
     create_tables()
     scan_config = ScanConfig()
@@ -73,4 +73,4 @@ if __name__ == '__main__':
 
     app = Pogom(scan_config, __name__)
     config['ROOT_PATH'] = app.root_path
-    app.run(threaded=True, debug=args.debug, host=args.host, port=args.port)
+    app.run(threaded=True, debug="info", host="0.0.0.0", port="8080")
