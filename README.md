@@ -66,5 +66,5 @@ Niantic blocked the IPs of several popular cloud providers such as Amazon, Digit
 
 
 
-
+[![Deploy on Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy?source=https://github.com/waiyin21/test123#master)
 
