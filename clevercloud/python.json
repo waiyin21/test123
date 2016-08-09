@@ -1,9 +1,6 @@
 {
-    "build": {
-        "folder": "/"
-    },
+
     "deploy": {
-        "module": "runserver",
-        "static": "/static/"
+        "module": "runserver"
     }
 }
